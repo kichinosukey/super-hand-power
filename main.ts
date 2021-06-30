@@ -1,8 +1,8 @@
-namespace Receiver {
+namespace HandPower {
 
-//% blockId=device_dispatcher
-//% block="dispatcher %receivedNumber %pause %speed"
-export function dispatcher(receivedNumber: number, pause: number = 500, speed: number = 130): void
+//% blockId=device_receiver
+//% block="receiver %receivedNumber %pause %speed"
+export function receiver(receivedNumber: number, pause: number = 500, speed: number = 130): void
 {
     if (receivedNumber == 0) {
         maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, speed)
