@@ -22,6 +22,22 @@ export function dispatcher(receivedNumber: number, pause: number = 500, speed: n
         maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CCW, speed)
         basic.pause(pause)
         maqueen.motorStop(maqueen.Motors.All)
+        }
     }
-}
+
+//% blockId=device_sender
+//% block="sender %sendNumber"
+export function sender(sendNumber: number = 1): void
+{
+    radio.setGroup(1)
+    if (input.isGesture(Gesture.TiltRight)) {
+        radio.sendNumber(0)
+    } else if (input.isGesture(Gesture.TiltRight)) {
+        radio.sendNumber(1)
+    } else if (input.isGesture(Gesture.LogoDown)) {
+        radio.sendNumber(2)
+    } else if (input.isGesture(Gesture.LogoUp)) {
+        radio.sendNumber(3)
+        }
+    }
 }
