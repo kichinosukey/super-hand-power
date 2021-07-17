@@ -32,13 +32,16 @@ export function sender(sendNumber: number): void
 {
     if (input.isGesture(Gesture.TiltRight)) {
         sendNumber = 1
-    } else if (input.isGesture(Gesture.TiltLeft)) {
+    }  
+    if (input.isGesture(Gesture.TiltLeft)) {
         sendNumber = 2
-    } else if (input.isGesture(Gesture.LogoDown)) {
+    }  
+    if (input.isGesture(Gesture.LogoDown)) {
         sendNumber = 3
-    } else if (input.isGesture(Gesture.LogoUp)) {
+    }  
+    if (input.isGesture(Gesture.LogoUp)) {
         sendNumber = 4
-        }
+    }
     basic.showNumber(sendNumber)
     radio.sendNumber(sendNumber)
     }
