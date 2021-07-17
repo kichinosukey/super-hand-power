@@ -31,7 +31,7 @@ export function sender(sendNumber: number): void
 {
     if (input.isGesture(Gesture.TiltRight)) {
         sendNumber = 1
-    } else if (input.isGesture(Gesture.TiltRight)) {
+    } else if (input.isGesture(Gesture.TiltLeft)) {
         sendNumber = 2
     } else if (input.isGesture(Gesture.LogoDown)) {
         sendNumber = 3
