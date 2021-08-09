@@ -1,3 +1,6 @@
+input.onButtonPressed(Button.A, function () {
+	
+})
 namespace HandPower {
 
 //% blockId=device_receiver
@@ -33,13 +36,13 @@ export function sender(sendNumber: number): void
     if (input.isGesture(Gesture.TiltRight)) {
         sendNumber = 1
     }  
-    if (input.isGesture(Gesture.TiltLeft)) {
+    if (input.buttonIsPressed(Button.A)) {
         sendNumber = 2
     }  
-    if (input.isGesture(Gesture.LogoDown)) {
+    if (input.buttonIsPressed(Button.B)) {
         sendNumber = 3
     }  
-    if (input.isGesture(Gesture.LogoUp)) {
+    if (input.buttonIsPressed(Button.AB)) {
         sendNumber = 4
     }
     basic.showNumber(sendNumber)
