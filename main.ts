@@ -39,10 +39,10 @@ export function sender(): void
         sendNumber = 1
     }  
     if (input.buttonIsPressed(Button.A)) {
-        sendNumber = 3
+        sendNumber = 4
     }  
     if (input.buttonIsPressed(Button.B)) {
-        sendNumber = 4
+        sendNumber = 3
     }  
     if (input.buttonIsPressed(Button.AB)) {
         sendNumber = 2
