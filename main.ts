@@ -31,9 +31,8 @@ export function receiver(receivedNumber: number, pause: number = 500, speed: num
 
 //% blockId=device_sender
 //% block="sender %sendNumber"
-export function sender(): void
+export function sender(sendNumber: number): void
 {
-    let sendNumber
     if (input.isGesture(Gesture.LogoDown)) {
         sendNumber = 1
     }  
