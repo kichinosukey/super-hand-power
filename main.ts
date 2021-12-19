@@ -31,23 +31,24 @@ export function receiver(receivedNumber: number, pause: number = 500, speed: num
 
 //% blockId=device_sender
 //% block="sender %sendNumber"
-export function sender(): void
+export function sender(pause: number = 500): void
 {
     let sendNumber = 0
 
-    if (input.isGesture(Gesture.LogoDown)) {
+    if (input.buttonIsPressed(Button.A)) {
         sendNumber = 1
     }  
-    if (input.buttonIsPressed(Button.A)) {
-        sendNumber = 4
-    }  
     if (input.buttonIsPressed(Button.B)) {
-        sendNumber = 3
-    }  
-    if (input.buttonIsPressed(Button.AB)) {
         sendNumber = 2
+    }  
+    if (input.isGesture(Gesture.TiltRight)) {
+        sendNumber = 3
+    }
+    if (input.isGesture(Gesture.TiltLeft)) {
+        sendNumber = 4
     }
     basic.showNumber(sendNumber)
     radio.sendNumber(sendNumber)
+    basic.pause(pause)
     }
 }
